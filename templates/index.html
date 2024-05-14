@@ -2,3 +2,18 @@
 {% extends "base.html" %}
 
 {%  block title %}Index{% endblock  %}
+
+
+{% block scripts %}
+  <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+  <div id="audio-player">
+       <button id="prev">Previous</button>
+       <audio id="player" controls src=""></audio>
+       <button id="next">Next</button>
+  </div>
+
+{%  endblock %}
